@@ -1,0 +1,35 @@
+---
+title: "Regression Analysis Lab: Foot_V_Height"
+author: "Harris Rodis"
+date: "4/2/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Loading Data
+Using the data included in the india_foot_height.dat file. First column corresponds to Feet height (in cm) and the second to total Height (in cm) of a sample of Indian people.
+```{r}
+india_foot_height <- read.table("india_foot_height.dat")
+names(india_foot_height)[1:2] <- c("Feet", "Height")
+```
+
+## Plotting Data
+By creating a scatter plot of dependent variable "Height" and the indipendent variable "Feet" we observe a positive relation between these.
+- The relation does not depend on the units of measure of the variables (changes in the "density" of axis does not change the relation)
+- This relation holds even we reverse the plot's axis (by making Feet the dependent variable)
+- If we square or take the log of one of our variables, the relation appears to change.
+```{r}
+plot(india_foot_height$Feet, india_foot_height$Height)
+```
+
+## Calculating r
+The value 0.578 of r for out sample indicate a positive linear relation of our variables.
+- We perform a t-test with H0: r = 0 and H1: r != 0.
+- Based on the resulted p-value and confidence interval we can reject the H0 hypothesis.
+```{r}
+cor(india_foot_height$Feet, india_foot_height$Height)
+cor.test(india_foot_height$Feet, india_foot_height$Height)
+```
