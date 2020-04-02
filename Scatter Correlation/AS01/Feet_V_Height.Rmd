@@ -27,7 +27,7 @@ plot(india_foot_height$Feet, india_foot_height$Height)
 
 ## Calculating r
 The value 0.578 of r for out sample indicate a positive linear relation of our variables.
-- We perform a t-test with H0: r = 0 and H1: r != 0.
+- We perform a t-test with H0: ρ = 0 and H1: ρ != 0.
 - Based on the resulted p-value and confidence interval we can reject the H0 hypothesis.
 ```{r}
 cor(india_foot_height$Feet, india_foot_height$Height)
