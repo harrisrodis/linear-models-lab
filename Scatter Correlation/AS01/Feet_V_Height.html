@@ -383,7 +383,7 @@ names(india_foot_height)[1:2] &lt;- c(&quot;Feet&quot;, &quot;Height&quot;)</cod
 </div>
 <div id="calculating-r" class="section level2">
 <h2>Calculating r</h2>
-<p>The value 0.578 of r for out sample indicate a positive linear relation of our variables. - We perform a t-test with H0: r = 0 and H1: r != 0. - Based on the resulted p-value and confidence interval we can reject the H0 hypothesis.</p>
+<p>The value 0.578 of r for out sample indicate a positive linear relation of our variables. - We perform a t-test with H0: ρ = 0 and H1: ρ != 0. - Based on the resulted p-value and confidence interval we can reject the H0 hypothesis.</p>
 <pre class="r"><code>cor(india_foot_height$Feet, india_foot_height$Height)</code></pre>
 <pre><code>## [1] 0.5779759</code></pre>
 <pre class="r"><code>cor.test(india_foot_height$Feet, india_foot_height$Height)</code></pre>
